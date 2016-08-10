@@ -96,8 +96,8 @@
         <property name="sidebarFacets">
             <list>
                 <ref bean="searchFilterAuthor" />
-                <!--ref bean="searchFilterSubject" />
-                <ref bean="searchFilterIssued" /-->
+                <ref bean="searchFilterSubject" />
+                <ref bean="searchFilterIssued" />
 		<ref bean="searchFilterDomain"/>
 		<ref bean="searchFilterModule"/>
 		<ref bean="searchFilterSourceType"/>
@@ -110,8 +110,8 @@
             <list>
                 <ref bean="searchFilterTitle" />
                 <ref bean="searchFilterAuthor" />
-                <!--ref bean="searchFilterSubject" />
-                <ref bean="searchFilterIssued" /-->
+                <ref bean="searchFilterSubject" />
+                <ref bean="searchFilterIssued" />
 		<ref bean="searchFilterDomain"/>
 		<ref bean="searchFilterModule"/>
 		<ref bean="searchFilterSourceType"/>
@@ -208,8 +208,8 @@
         <property name="sidebarFacets">
             <list>
                 <ref bean="searchFilterAuthor" />
-                <!--ref bean="searchFilterSubject" />
-                <ref bean="searchFilterIssued" /-->
+                <ref bean="searchFilterSubject" />
+                <ref bean="searchFilterIssued" />
 		<ref bean="searchFilterDomain"/>
 		<ref bean="searchFilterModule"/>
 		<ref bean="searchFilterSourceType"/>
@@ -222,8 +222,8 @@
             <list>
                 <ref bean="searchFilterTitle" />
                 <ref bean="searchFilterAuthor" />
-                <!--ref bean="searchFilterSubject" />
-                <ref bean="searchFilterIssued" /-->
+                <ref bean="searchFilterSubject" />
+                <ref bean="searchFilterIssued" />
 		<ref bean="searchFilterDomain"/>
 		<ref bean="searchFilterModule"/>
 		<ref bean="searchFilterSourceType"/>
