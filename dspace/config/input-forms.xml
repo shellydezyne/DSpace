@@ -493,21 +493,21 @@ it, please enter the types and the actual numbers or codes.</hint>
    <value-pairs value-pairs-name="sahapedia_sourcetype" dc-term="source">
      <pair>
        <displayed-value>Institution</displayed-value>
-       <stored-value>INS</stored-value>
+       <stored-value>Institution</stored-value>
      </pair>
      <pair>
        <displayed-value>Individual</displayed-value>
-       <stored-value>IND</stored-value>
+       <stored-value>Individual</stored-value>
      </pair>
    </value-pairs>
    <value-pairs value-pairs-name="sahapedia_fundingtype" dc-term="project">
      <pair>
        <displayed-value>Sahapedia</displayed-value>
-       <stored-value>SAHA</stored-value>
+       <stored-value>Sahapedia</stored-value>
      </pair>
      <pair>
        <displayed-value>Others</displayed-value>
-       <stored-value>OTH</stored-value>
+       <stored-value>Others</stored-value>
      </pair>
    </value-pairs>
 
