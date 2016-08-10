@@ -515,47 +515,47 @@ it, please enter the types and the actual numbers or codes.</hint>
    <value-pairs value-pairs-name="sahapedia_domains" dc-term="domain">
      <pair>
        <displayed-value>Knowledge Traditions</displayed-value>
-       <stored-value>KT</stored-value>
+       <stored-value>Knowledge Traditions</stored-value>
      </pair>
      <pair>
        <displayed-value>Visual and Material Arts</displayed-value>
-       <stored-value>VMA</stored-value>
+       <stored-value>Visual and Material Arts</stored-value>
      </pair>
      <pair>
        <displayed-value>Performing Arts</displayed-value>
-       <stored-value>PA</stored-value>
+       <stored-value>Performing Arts</stored-value>
      </pair>
      <pair>
        <displayed-value>Literature and Languages</displayed-value>
-       <stored-value>LL</stored-value>
+       <stored-value>Literature and Languages</stored-value>
      </pair>
      <pair>
        <displayed-value>Practices and Rituals</displayed-value>
-       <stored-value>PR</stored-value>
+       <stored-value>Practices and Rituals</stored-value>
      </pair>
      <pair>
        <displayed-value>Histories</displayed-value>
-       <stored-value>HIST</stored-value>
+       <stored-value>Histories</stored-value>
      </pair>
      <pair>
        <displayed-value>Institutions</displayed-value>
-       <stored-value>INS</stored-value>
+       <stored-value>Institutions</stored-value>
      </pair>
      <pair>
        <displayed-value>People</displayed-value>
-       <stored-value>PEO</stored-value>
+       <stored-value>People</stored-value>
      </pair>
      <pair>
        <displayed-value>Built Spaces</displayed-value>
-       <stored-value>BS</stored-value>
+       <stored-value>Built Spaces</stored-value>
      </pair>
      <pair>
        <displayed-value>Natural Environment</displayed-value>
-       <stored-value>NE</stored-value>
+       <stored-value>Natural Environment</stored-value>
      </pair>
      <pair>
        <displayed-value>Others</displayed-value>
-       <stored-value>OTH</stored-value>
+       <stored-value>Others</stored-value>
      </pair>
 
    </value-pairs>

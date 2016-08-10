@@ -96,8 +96,11 @@
         <property name="sidebarFacets">
             <list>
                 <ref bean="searchFilterAuthor" />
-                <ref bean="searchFilterSubject" />
-                <ref bean="searchFilterIssued" />
+                <!--ref bean="searchFilterSubject" />
+                <ref bean="searchFilterIssued" /-->
+		<ref bean="searchFilterDomain"/>
+		<ref bean="searchFilterModule"/>
+		<ref bean="searchFilterSourceType"/>
             </list>
         </property>
         <!-- Set TagCloud configuration per discovery configuration -->
@@ -107,8 +110,11 @@
             <list>
                 <ref bean="searchFilterTitle" />
                 <ref bean="searchFilterAuthor" />
-                <ref bean="searchFilterSubject" />
-                <ref bean="searchFilterIssued" />
+                <!--ref bean="searchFilterSubject" />
+                <ref bean="searchFilterIssued" /-->
+		<ref bean="searchFilterDomain"/>
+		<ref bean="searchFilterModule"/>
+		<ref bean="searchFilterSourceType"/>
             </list>
         </property>
         <!--The sort filters for the discovery search-->
@@ -120,7 +126,8 @@
                 <property name="sortFields">
                     <list>
                         <ref bean="sortTitle" />
-                        <ref bean="sortDateIssued" />
+                        <!--ref bean="sortDateIssued" /-->
+                        <ref bean="sortDateCreated" />
                     </list>
                 </property>
             </bean>
@@ -201,8 +208,11 @@
         <property name="sidebarFacets">
             <list>
                 <ref bean="searchFilterAuthor" />
-                <ref bean="searchFilterSubject" />
-                <ref bean="searchFilterIssued" />
+                <!--ref bean="searchFilterSubject" />
+                <ref bean="searchFilterIssued" /-->
+		<ref bean="searchFilterDomain"/>
+		<ref bean="searchFilterModule"/>
+		<ref bean="searchFilterSourceType"/>
             </list>
         </property>
         <!-- Set TagCloud configuration per discovery configuration -->
@@ -212,8 +222,11 @@
             <list>
                 <ref bean="searchFilterTitle" />
                 <ref bean="searchFilterAuthor" />
-                <ref bean="searchFilterSubject" />
-                <ref bean="searchFilterIssued" />
+                <!--ref bean="searchFilterSubject" />
+                <ref bean="searchFilterIssued" /-->
+		<ref bean="searchFilterDomain"/>
+		<ref bean="searchFilterModule"/>
+		<ref bean="searchFilterSourceType"/>
             </list>
         </property>
         <!--The sort filters for the discovery search (same as defaultConfiguration above)-->
@@ -225,7 +238,8 @@
                 <property name="sortFields">
                     <list>
                         <ref bean="sortTitle" />
-                        <ref bean="sortDateIssued" />
+                        <!--ref bean="sortDateIssued" /-->
+                        <ref bean="sortDateCreated" />
                     </list>
                 </property>
             </bean>
@@ -405,6 +419,40 @@
         <property name="sortOrder" value="VALUE"/>
     </bean>
 
+    <bean id="searchFilterDomain" class="org.dspace.discovery.configuration.HierarchicalSidebarFacetConfiguration">
+        <property name="indexFieldName" value="domain"/>
+        <property name="metadataFields">
+            <list>
+                <value>dc.domain</value>
+            </list>
+        </property>
+        <property name="facetLimit" value="10"/>
+        <property name="sortOrder" value="COUNT"/>
+        <property name="splitter" value="::"/>
+    </bean>
+    <bean id="searchFilterModule" class="org.dspace.discovery.configuration.HierarchicalSidebarFacetConfiguration">
+        <property name="indexFieldName" value="module"/>
+        <property name="metadataFields">
+            <list>
+                <value>dc.module</value>
+            </list>
+        </property>
+        <property name="facetLimit" value="10"/>
+        <property name="sortOrder" value="COUNT"/>
+        <property name="splitter" value="::"/>
+    </bean>
+    <bean id="searchFilterSourceType" class="org.dspace.discovery.configuration.HierarchicalSidebarFacetConfiguration">
+        <property name="indexFieldName" value="source"/>
+        <property name="metadataFields">
+            <list>
+                <value>dc.source.type</value>
+            </list>
+        </property>
+        <property name="facetLimit" value="10"/>
+        <property name="sortOrder" value="COUNT"/>
+        <property name="splitter" value="::"/>
+    </bean>
+
     <!--Sort properties-->
     <bean id="sortTitle" class="org.dspace.discovery.configuration.DiscoverySortFieldConfiguration">
         <property name="metadataField" value="dc.title"/>
@@ -412,6 +460,10 @@
 
     <bean id="sortDateIssued" class="org.dspace.discovery.configuration.DiscoverySortFieldConfiguration">
         <property name="metadataField" value="dc.date.issued"/>
+        <property name="type" value="date"/>
+    </bean>
+    <bean id="sortDateCreated" class="org.dspace.discovery.configuration.DiscoverySortFieldConfiguration">
+        <property name="metadataField" value="dc.date.created"/>
         <property name="type" value="date"/>
     </bean>
     
