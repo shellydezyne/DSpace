@@ -83,7 +83,7 @@
         </fmt:message>
         <dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\") + \"#epeople\"%>"><fmt:message key="jsp.help"/></dspace:popup>
         </h1>
-  
+
 
 <% if (emailExists)
 	{ %><p class="alert alert-warning">
@@ -94,7 +94,7 @@
     <form method="post" action="">
 
 		<div class="row">
-            <%-- <td>Email:</td> --%>         
+            <%-- <td>Email:</td> --%>
             <label class="col-md-2" for="temail"><fmt:message key="jsp.dspace-admin.eperson-edit.email"/></label>
             <div class="col-md-6">
             	<input type="hidden" name="eperson_id" value="<%=eperson.getID()%>"/>
@@ -108,16 +108,29 @@
             <div class="col-md-6">
 				<input class="form-control" name="lastname" id="tlastname" size="24" value="<%=lastName == null ? "" : Utils.addEntities(lastName) %>"/>
 			</div>
-       </div>     
+       </div>
 
-        <div class="row">           
+        <div class="row">
             <%-- <td>First Name:</td> --%>
             <label class="col-md-2" for="tfirstname"><fmt:message key="jsp.dspace-admin.eperson.general.firstname"/></label>
             <div class="col-md-6">
                 <input class="form-control" name="firstname" id="tfirstname" size="24" value="<%=firstName == null ? "" : Utils.addEntities(firstName) %>"/>
             </div>
          </div>
-
+         <div class="row">
+             <%-- <td>Password:</td> --%>
+             <label class="col-md-2" for="tpassword"><fmt:message key="jsp.dspace-admin.eperson.general.password"/></label>
+             <div class="col-md-6">
+                 <input class="form-control" name="password" id="tpassword" size="24" value=""/>
+             </div>
+          </div>
+          <div class="row">
+              <%-- <td>Confirm Password:</td> --%>
+              <label class="col-md-2" for="tpassword_confirm"><fmt:message key="jsp.dspace-admin.eperson.general.password_confirm"/></label>
+              <div class="col-md-6">
+                  <input class="form-control" name="password_confirm" id="tpassword_confirm" size="24" value=""/>
+              </div>
+           </div>
         <% if (ldap_enabled) { %>
 		<div class="row">
             <label class="col-md-2">LDAP NetID:</label>
@@ -132,12 +145,12 @@
             <label class="col-md-2" for="tphone"><fmt:message key="jsp.dspace-admin.eperson-edit.phone"/></label>
             <div class="col-md-6">
 				<input class="form-control" name="phone" id="tphone" size="24" value="<%=phone == null ? "" : Utils.addEntities(phone) %>"/>
-			</div>  
+			</div>
   		</div>
-  		
-  		<div class="row">          
+
+  		<div class="row">
             <label class="col-md-2" for="tlanguage"><fmt:message key="jsp.register.profile-form.language.field"/></label>
-            <div class="col-md-6">            
+            <div class="col-md-6">
        		<select class="form-control" name="language" id="tlanguage">
 <%
 		Locale[] supportedLocales = I18nUtil.getSupportedLocales();
@@ -146,7 +159,7 @@
         {
         	String lang = supportedLocales[i].toString();
         	String selected = "";
-        	
+
         	if (language == null || language.equals(""))
         	{ if(lang.equals(I18nUtil.getSupportedLocale(request.getLocale()).getLanguage()))
         		{
@@ -186,7 +199,7 @@
                     <%-- <input type="submit" name="submit_delete" value="Delete EPerson..."> --%>
                     <input class="btn btn-danger" type="submit" name="submit_delete" value="<fmt:message key="jsp.dspace-admin.general.delete"/>" />
          </div>
-	
+
     </form>
 
 <%
@@ -195,16 +208,16 @@
 %>
 	<br/>
 	<br/>
-	
+
 	<h3><fmt:message key="jsp.dspace-admin.eperson-edit.groups"/></h3>
-	
-	<div class="row">    
+
+	<div class="row">
     <ul>
 	<%  for(int i=0; i<groupMemberships.length; i++)
      	{
         String myLink = groupMemberships[i].getName();
         String args   = "submit_edit&amp;group_id="+groupMemberships[i].getID();
-        
+
         myLink = "<a href=\""
         +request.getContextPath()
         +"/tools/group-edit?"+args+"\">" + myLink + "</a>";
@@ -213,6 +226,6 @@
 	<%  } %>
     </ul>
     </div>
-<% } %>  
+<% } %>
 
 </dspace:layout>
