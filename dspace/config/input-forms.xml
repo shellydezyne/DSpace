@@ -85,23 +85,12 @@
          <dc-schema>dc</dc-schema>
          <dc-element>creator</dc-element>
          <dc-qualifier>biography</dc-qualifier>
-         <repeatable>false</repeatable>
+         <repeatable>true</repeatable>
          <label>Author/Photographer/Creator Biography</label>
          <input-type>textarea</input-type>
          <hint>Please enter the biography of the author/creator/photographer</hint>
          <required></required>
        </field>
-       <field>
-         <dc-schema>dc</dc-schema>
-         <dc-element>creator</dc-element>
-         <dc-qualifier>photo</dc-qualifier>
-         <repeatable>false</repeatable>
-         <label>Author/Photographer/Creator Photo</label>
-         <input-type>onebox</input-type>
-         <hint>Please enter the URI of photo of the author/creator/photographer</hint>
-         <required></required>
-       </field>
-
        <field>
          <dc-schema>dc</dc-schema>
          <dc-element>contributor</dc-element>
@@ -124,27 +113,6 @@
          <required>You must enter a main title for this item.</required>
        </field>
 
-      <field>
-         <dc-schema>dc</dc-schema>
-         <dc-element>date</dc-element>
-         <dc-qualifier>startdate</dc-qualifier>
-         <repeatable>false</repeatable>
-         <label>Start Date</label>
-         <input-type>date</input-type>
-         <hint>Please give the start date.</hint>
-         <required>You must enter at least the year.</required>
-       </field>
-
-      <field>
-         <dc-schema>dc</dc-schema>
-         <dc-element>date</dc-element>
-         <dc-qualifier>enddate</dc-qualifier>
-         <repeatable>false</repeatable>
-         <label>End Date</label>
-         <input-type>date</input-type>
-         <hint>Please give the end date.</hint>
-         <required>You must enter at least the year.</required>
-       </field>
      <field>
          <dc-schema>dc</dc-schema>
          <dc-element>date</dc-element>
@@ -153,17 +121,17 @@
          <label>Recording Date</label>
          <input-type>date</input-type>
          <hint>Please give the recording date.</hint>
-         <required>You must enter at least the year.</required>
+         <required></required>
        </field>
     <field>
          <dc-schema>dc</dc-schema>
          <dc-element>date</dc-element>
          <dc-qualifier>upload</dc-qualifier>
          <repeatable>false</repeatable>
-         <label>Upload Date</label>
+         <label>Date of upload onto Sahapedia Platform</label>
          <input-type>date</input-type>
-         <hint>Please give the upload date.</hint>
-         <required>You must enter at least the year.</required>
+         <hint>Please give the upload date onto Sahapedia.</hint>
+         <required></required>
        </field>
     <field>
          <dc-schema>dc</dc-schema>
@@ -173,7 +141,7 @@
          <label>Signing Date</label>
          <input-type>date</input-type>
          <hint>Please give the signing date.</hint>
-         <required>You must enter at least the year.</required>
+         <required></required>
     </field>
 
 
@@ -228,7 +196,7 @@
          <dc-element>identifier</dc-element>
          <dc-qualifier>title</dc-qualifier>
          <repeatable>false</repeatable>
-         <label>Title</label>
+         <label>Book or Journal Title</label>
          <input-type>onebox</input-type>
          <hint>Book Title</hint>
          <required></required>
@@ -267,9 +235,8 @@ it, please enter the types and the actual numbers or codes.</hint>
          <hint>Please give the date of publication or public distribution.
                         You can leave out the day and/or month if they aren't
                         applicable.</hint>
-         <required>You must enter at least the year.</required>
+         <required></required>
        </field>
-
        <field>
          <dc-schema>dc</dc-schema>
          <dc-element>identifier</dc-element>
@@ -277,36 +244,13 @@ it, please enter the types and the actual numbers or codes.</hint>
          <repeatable>false</repeatable>
          <label>Citation</label>
          <input-type>onebox</input-type>
-         <hint>Enter the standard citation for the previously issued instance of this item.</hint>
+         <hint>Enter the standard citation for the Journal item.</hint>
          <required></required>
        </field>
-
-       <field>
-         <dc-schema>dc</dc-schema>
-         <dc-element>relation</dc-element>
-         <dc-qualifier>ispartofseries</dc-qualifier>
-         <repeatable>true</repeatable>
-         <label>Series/Report No.</label>
-         <input-type>series</input-type>
-         <hint>Enter the series and number assigned to this item by your community.</hint>
-         <required></required>
-       </field>
-
-
-
      </page>
 
      <page number="2">
-       <field>
-         <dc-schema>dc</dc-schema>
-         <dc-element>description</dc-element>
-         <dc-qualifier></dc-qualifier>
-         <repeatable>false</repeatable>
-         <label>Description</label>
-         <input-type>textarea</input-type>
-         <hint>Enter any other description or comments in this box. </hint>
-         <required></required>
-       </field>
+
        <field>
          <dc-schema>dc</dc-schema>
          <dc-element>source</dc-element>
@@ -319,17 +263,7 @@ it, please enter the types and the actual numbers or codes.</hint>
          <required>true</required>
        </field>
 
-      <field>
-         <dc-schema>dc</dc-schema>
-         <dc-element>collection</dc-element>
-         <dc-qualifier></dc-qualifier>
-         <!-- An input-type of twobox MUST be marked as repeatable -->
-         <repeatable></repeatable>
-         <label>Collection</label>
-         <input-type>onebox</input-type>
-         <hint>Please enter the collection name</hint>
-         <required></required>
-       </field>
+
       <field>
          <dc-schema>dc</dc-schema>
          <dc-element>project</dc-element>
@@ -346,35 +280,11 @@ it, please enter the types and the actual numbers or codes.</hint>
          <dc-element>parties</dc-element>
          <dc-qualifier></dc-qualifier>
          <repeatable>true</repeatable>
-         <label>Parties(s)</label>
-         <input-type>twobox</input-type>
+         <label>Parties(s)/Institutional Partner(s)</label>
+         <input-type>onebox</input-type>
          <hint>Enter the names of the parties(s)</hint>
          <required></required>
        </field>
-
-      <field>
-         <dc-schema>dc</dc-schema>
-         <dc-element>project</dc-element>
-         <dc-qualifier>partner</dc-qualifier>
-         <!-- An input-type of twobox MUST be marked as repeatable -->
-         <repeatable>true</repeatable>
-         <label>Institutional Partner(s)</label>
-         <input-type>twobox</input-type>
-         <hint>Please enter the institutional partner(s) name</hint>
-         <required></required>
-       </field>
-       <field>
-         <dc-schema>dc</dc-schema>
-         <dc-element>project</dc-element>
-         <dc-qualifier>fundedby</dc-qualifier>
-         <!-- An input-type of qualdrop_value MUST be marked as repeatable -->
-         <repeatable></repeatable>
-         <label>Source Type</label>
-         <input-type value-pairs-name="sahapedia_fundingtype">dropdown</input-type>
-         <hint>Please enter the funding type</hint>
-         <required>true</required>
-       </field>
-
 
        <field>
          <dc-schema>dc</dc-schema>
@@ -395,22 +305,13 @@ it, please enter the types and the actual numbers or codes.</hint>
          <!-- An input-type of twobox MUST be marked as repeatable -->
          <repeatable>true</repeatable>
          <label>Subject Keywords</label>
-         <input-type>twobox</input-type>
+         <input-type>onebox</input-type>
          <hint>Enter appropriate subject keywords or phrases. </hint>
          <required></required>
          <vocabulary>srsc</vocabulary>
        </field>
 
-       <field>
-         <dc-schema>dc</dc-schema>
-         <dc-element>description</dc-element>
-         <dc-qualifier>abstract</dc-qualifier>
-         <repeatable>false</repeatable>
-         <label>Abstract</label>
-         <input-type>textarea</input-type>
-         <hint>Enter the abstract of the item. </hint>
-         <required></required>
-       </field>
+
 
        <!--field>
          <dc-schema>dc</dc-schema>
@@ -439,8 +340,8 @@ it, please enter the types and the actual numbers or codes.</hint>
          <!-- An input-type of twobox MUST be marked as repeatable -->
          <repeatable>true</repeatable>
          <label>Tag(s)</label>
-         <input-type>twobox</input-type>
-         <hint>Please enter appropriate subject keywords or phrases.</hint>
+         <input-type>onebox</input-type>
+         <hint>Please enter Tag(s).</hint>
          <required></required>
          <vocabulary>srsc</vocabulary>
        </field>
@@ -499,6 +400,10 @@ it, please enter the types and the actual numbers or codes.</hint>
        <displayed-value>Individual</displayed-value>
        <stored-value>Individual</stored-value>
      </pair>
+     <pair>
+       <displayed-value>Others</displayed-value>
+       <stored-value>Others</stored-value>
+     </pair>
    </value-pairs>
    <value-pairs value-pairs-name="sahapedia_fundingtype" dc-term="project">
      <pair>
@@ -552,6 +457,18 @@ it, please enter the types and the actual numbers or codes.</hint>
      <pair>
        <displayed-value>Natural Environment</displayed-value>
        <stored-value>Natural Environment</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Administration</displayed-value>
+       <stored-value>Administration</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Human Resources</displayed-value>
+       <stored-value>Human Resources</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Finance</displayed-value>
+       <stored-value>Finance</stored-value>
      </pair>
      <pair>
        <displayed-value>Others</displayed-value>
@@ -625,6 +542,10 @@ it, please enter the types and the actual numbers or codes.</hint>
        <stored-value>Map</stored-value>
      </pair>
      <pair>
+       <displayed-value>MoU</displayed-value>
+       <stored-value>MoU</stored-value>
+     </pair>
+     <pair>
        <displayed-value>Musical Score</displayed-value>
        <stored-value>Musical Score</stored-value>
      </pair>
@@ -639,6 +560,10 @@ it, please enter the types and the actual numbers or codes.</hint>
      <pair>
        <displayed-value>Presentation</displayed-value>
        <stored-value>Presentation</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Proposal</displayed-value>
+       <stored-value>Proposal</stored-value>
      </pair>
      <pair>
        <displayed-value>Recording, acoustical</displayed-value>
@@ -656,9 +581,14 @@ it, please enter the types and the actual numbers or codes.</hint>
        <displayed-value>Software</displayed-value>
        <stored-value>Software</stored-value>
      </pair>
+
      <pair>
        <displayed-value>Technical Report</displayed-value>
        <stored-value>Technical Report</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Template</displayed-value>
+       <stored-value>Template</stored-value>
      </pair>
      <pair>
        <displayed-value>Thesis</displayed-value>
@@ -682,6 +612,105 @@ it, please enter the types and the actual numbers or codes.</hint>
         "en_US", "en", "es", "de", "fr", "it", "ja", "zh", "other", ""
      -->
    <value-pairs value-pairs-name="common_iso_languages" dc-term="language_iso">
+     <pair>
+       <displayed-value>Asomiya</displayed-value>
+       <stored-value>Asomiya</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Bangla</displayed-value>
+       <stored-value>Bangla</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Dogri</displayed-value>
+       <stored-value>Dogri</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Gondi</displayed-value>
+       <stored-value>Gondi</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Gujrati</displayed-value>
+       <stored-value>Gujrati</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Hindi</displayed-value>
+       <stored-value>Hindi</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Kannada</displayed-value>
+       <stored-value>Kannada</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Kashmiri</displayed-value>
+       <stored-value>Kashmiri</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Kokborok</displayed-value>
+       <stored-value>Kokborok</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Konkani</displayed-value>
+       <stored-value>Konkani</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Maithili</displayed-value>
+       <stored-value>Maithili</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Malayalam</displayed-value>
+       <stored-value>Malayalam</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Marathi</displayed-value>
+       <stored-value>Marathi</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Meitei</displayed-value>
+       <stored-value>Meitei</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Mizo</displayed-value>
+       <stored-value>Mizo</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Nepali</displayed-value>
+       <stored-value>Nepali</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Odia</displayed-value>
+       <stored-value>Odia</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Pahari</displayed-value>
+       <stored-value>Pahari</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Punjabi</displayed-value>
+       <stored-value>Punjabi</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Rajasthani</displayed-value>
+       <stored-value>Rajasthani</stored-value>
+     </pair><pair>
+       <displayed-value>Sanskrit</displayed-value>
+       <stored-value>Sanskrit</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Sindhi</displayed-value>
+       <stored-value>Sindhi</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Tamil</displayed-value>
+       <stored-value>Tamil</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Telugu</displayed-value>
+       <stored-value>Telugu</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Urdu</displayed-value>
+       <stored-value>Urdu</stored-value>
+     </pair>
      <pair>
        <displayed-value>N/A</displayed-value>
        <stored-value></stored-value>
