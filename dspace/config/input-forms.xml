@@ -68,54 +68,8 @@
          <label>Module(s)</label>
          <input-type>onebox</input-type>
          <hint>Enter the names of the module(s)</hint>
-         <required></required>
+         <required>true</required>
        </field>
-
-
-       <field>
-         <dc-schema>dc</dc-schema>
-         <dc-element>contributor</dc-element>
-         <dc-qualifier>author</dc-qualifier>
-         <repeatable>true</repeatable>
-         <label>Author(s)/Contributor(s)</label>
-         <input-type>name</input-type>
-         <hint>Enter the names of the authors/contributors of this item.</hint>
-         <required></required>
-       </field>
-       <field>
-         <dc-schema>dc</dc-schema>
-         <dc-element>contributor</dc-element>
-         <dc-qualifier>coordinator</dc-qualifier>
-         <repeatable>true</repeatable>
-         <label>Coordinator(s)</label>
-         <input-type>name</input-type>
-         <hint>Enter the names of the coordinators</hint>
-         <required>You must enter a main coordinator for this item.</required>
-       </field>
-
-       <field>
-         <dc-schema>dc</dc-schema>
-         <dc-element>creator</dc-element>
-         <dc-qualifier>biography</dc-qualifier>
-         <repeatable>true</repeatable>
-         <label>Author/Photographer/Creator Biography</label>
-         <input-type>textarea</input-type>
-         <hint>Please enter the biography of the author/creator/photographer</hint>
-         <required></required>
-       </field>
-       
-
-     <field>
-         <dc-schema>dc</dc-schema>
-         <dc-element>date</dc-element>
-         <dc-qualifier>upload</dc-qualifier>
-         <repeatable>false</repeatable>
-         <label>Date of upload onto Sahapedia Platform</label>
-         <input-type>date</input-type>
-         <hint>Please give the upload date onto Sahapedia.</hint>
-         <required></required>
-       </field>
- 
       <field>
          <dc-schema>dc</dc-schema>
          <dc-element>source</dc-element>
@@ -127,21 +81,37 @@
          <hint>Please enter the source type</hint>
          <required>true</required>
        </field>
-
-
-       <!--field>
+      <field>
          <dc-schema>dc</dc-schema>
-         <dc-element>date</dc-element>
-         <dc-qualifier>issued</dc-qualifier>
-         <repeatable>false</repeatable>
-         <label>Date of Issue</label>
-         <input-type>date</input-type>
-         <hint>Please give the date of previous publication or public distribution.
-                        You can leave out the day and/or month if they aren't
-                        applicable.</hint>
-         <required>You must enter at least the year.</required>
-       </field-->
-
+         <dc-element>contributor</dc-element>
+         <dc-qualifier>coordinator</dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>Coordinator(s)</label>
+         <input-type>name</input-type>
+         <hint>Enter the names of the coordinators</hint>
+         <required>You must enter a main coordinator for this item.</required>
+       </field>
+       <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>contributor</dc-element>
+         <dc-qualifier>author</dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>Author(s)/Contributor(s)</label>
+         <input-type>name</input-type>
+         <hint>Enter the names of the authors/contributors of this item.</hint>
+         <required></required>
+       </field>
+ 
+       <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>creator</dc-element>
+         <dc-qualifier>biography</dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>Author/Photographer/Creator Biography</label>
+         <input-type>textarea</input-type>
+         <hint>Please enter the biography of the author/creator/photographer</hint>
+         <required></required>
+       </field>
        <field>
          <dc-schema>dc</dc-schema>
          <dc-element>type</dc-element>
@@ -199,16 +169,6 @@
          <hint>Enter the names of any sponsors and/or funding codes in the box. </hint>
          <required></required>
        </field-->
-      <field>
-         <dc-schema>dc</dc-schema>
-         <dc-element>remarks</dc-element>
-         <dc-qualifier></dc-qualifier>
-         <repeatable>false</repeatable>
-         <label>Remarks</label>
-         <input-type>textarea</input-type>
-         <hint>Please enter any remarks on this item.</hint>
-         <required></required>
-       </field>
        <field>
          <dc-schema>dc</dc-schema>
          <dc-element>tags</dc-element>
@@ -220,8 +180,19 @@
          <hint>Please enter Tag(s).</hint>
          <required></required>
          <vocabulary>srsc</vocabulary>
+       </field>       
+
+     <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>date</dc-element>
+         <dc-qualifier>upload</dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Date of upload onto Sahapedia Platform</label>
+         <input-type>date</input-type>
+         <hint>Please give the upload date onto Sahapedia.</hint>
+         <required></required>
        </field>
-      <field>
+     <field>
          <dc-schema>dc</dc-schema>
          <dc-element>rights</dc-element>
          <dc-qualifier></dc-qualifier>
@@ -233,6 +204,34 @@
          <required></required>
        </field>
 
+      <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>remarks</dc-element>
+         <dc-qualifier></dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Remarks</label>
+         <input-type>textarea</input-type>
+         <hint>Please enter any remarks on this item.</hint>
+         <required></required>
+       </field>
+ 
+
+
+       <!--field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>date</dc-element>
+         <dc-qualifier>issued</dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Date of Issue</label>
+         <input-type>date</input-type>
+         <hint>Please give the date of previous publication or public distribution.
+                        You can leave out the day and/or month if they aren't
+                        applicable.</hint>
+         <required>You must enter at least the year.</required>
+       </field-->
+
+
+ 
      </page>
      <page number="2">
        <field>
