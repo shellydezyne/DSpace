@@ -213,7 +213,6 @@
 		<ref bean="searchFilterDomain"/>
 		<ref bean="searchFilterModule"/>
 		<ref bean="searchFilterSourceType"/>
-    <ref bean="searchFilterPlace"/>
             </list>
         </property>
         <!-- Set TagCloud configuration per discovery configuration -->
@@ -463,6 +462,7 @@
         </property>
         <property name="facetLimit" value="10"/>
         <property name="sortOrder" value="VALUE"/>
+        <property name="splitter" value="::"/>
     </bean>
     <!--Sort properties-->
     <bean id="sortTitle" class="org.dspace.discovery.configuration.DiscoverySortFieldConfiguration">
