@@ -454,7 +454,7 @@
         <property name="sortOrder" value="COUNT"/>
         <property name="splitter" value="::"/>
     </bean>
-    <bean id="searchFilterPlace" class="org.dspace.discovery.configuration.DiscoverySearchFilter">
+    <bean id="searchFilterPlace" class="org.dspace.discovery.configuration.HierarchicalSidebarFacetConfiguration">
         <property name="indexFieldName" value="place"/>
         <property name="metadataFields">
             <list>
