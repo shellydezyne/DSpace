@@ -227,7 +227,7 @@
 		<ref bean="searchFilterDomain"/>
 		<ref bean="searchFilterModule"/>
 		<ref bean="searchFilterSourceType"/>
-    <ref bean="searchFilterPlace"/>
+    <!--ref bean="searchFilterPlace"/-->
             </list>
         </property>
         <!--The sort filters for the discovery search (same as defaultConfiguration above)-->
@@ -453,7 +453,7 @@
         <property name="sortOrder" value="COUNT"/>
         <property name="splitter" value="::"/>
     </bean>
-    <bean id="searchFilterPlace" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
+    <!--bean id="searchFilterPlace" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
         <property name="indexFieldName" value="place"/>
         <property name="metadataFields">
             <list>
@@ -462,7 +462,7 @@
         </property>
         <property name="facetLimit" value="10"/>
         <property name="sortOrder" value="VALUE"/>
-    </bean>
+    </bean-->
     <!--Sort properties-->
     <bean id="sortTitle" class="org.dspace.discovery.configuration.DiscoverySortFieldConfiguration">
         <property name="metadataField" value="dc.title"/>
