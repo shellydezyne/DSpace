@@ -228,6 +228,7 @@
 		<ref bean="searchFilterDomain"/>
 		<ref bean="searchFilterModule"/>
 		<ref bean="searchFilterSourceType"/>
+		<ref bean="searchFilterPlace"/>
     <!--ref bean="searchFilterPlace"/-->
             </list>
         </property>
@@ -405,7 +406,7 @@
             </list>
         </property>
         <property name="facetLimit" value="10"/>
-        <property name="sortOrder" value="COUNT"/>
+        <property name="sortOrder" value="VALUE"/>
     </bean>
 
     <bean id="searchFilterSubject" class="org.dspace.discovery.configuration.HierarchicalSidebarFacetConfiguration">
