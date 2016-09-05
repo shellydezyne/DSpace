@@ -115,6 +115,7 @@
 		<ref bean="searchFilterDomain"/>
 		<ref bean="searchFilterModule"/>
 		<ref bean="searchFilterSourceType"/>
+		<ref bean="searchFilterPlace"/>
             </list>
         </property>
         <!--The sort filters for the discovery search-->
@@ -391,6 +392,16 @@
             <list>
                 <value>dc.contributor.author</value>
                 <value>dc.creator</value>
+            </list>
+        </property>
+        <property name="facetLimit" value="10"/>
+        <property name="sortOrder" value="COUNT"/>
+    </bean>
+    <bean id="searchFilterPlace" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
+        <property name="indexFieldName" value="place"/>
+        <property name="metadataFields">
+            <list>
+                <value>dc.place</value>
             </list>
         </property>
         <property name="facetLimit" value="10"/>
