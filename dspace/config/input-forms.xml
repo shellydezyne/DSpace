@@ -68,7 +68,7 @@
          <label>Module(s)</label>
          <input-type>onebox</input-type>
          <hint>Enter the names of the module(s)</hint>
-         <required>true</required>
+         <required></required>
        </field>
       <field>
          <dc-schema>dc</dc-schema>
@@ -101,7 +101,7 @@
          <hint>Enter the names of the authors/contributors of this item.</hint>
          <required></required>
        </field>
- 
+
        <field>
          <dc-schema>dc</dc-schema>
          <dc-element>creator</dc-element>
@@ -180,7 +180,7 @@
          <hint>Please enter Tag(s).</hint>
          <required></required>
          <vocabulary>srsc</vocabulary>
-       </field>       
+       </field>
 
      <field>
          <dc-schema>dc</dc-schema>
@@ -214,7 +214,7 @@
          <hint>Please enter any remarks on this item.</hint>
          <required></required>
        </field>
- 
+
 
 
        <!--field>
@@ -231,7 +231,7 @@
        </field-->
 
 
- 
+
      </page>
      <page number="2">
        <field>
@@ -294,7 +294,7 @@ it, please enter the types and the actual numbers or codes.</hint>
      </page>
      <page number="3">
 
- 
+
 
       <field>
          <dc-schema>dc</dc-schema>
@@ -330,7 +330,7 @@ it, please enter the types and the actual numbers or codes.</hint>
     </field>
 
 
- 
+
      </page>
      <page number="4">
        <field>
@@ -623,6 +623,14 @@ it, please enter the types and the actual numbers or codes.</hint>
      -->
    <value-pairs value-pairs-name="common_iso_languages" dc-term="language_iso">
      <pair>
+       <displayed-value>English (United States)</displayed-value>
+       <stored-value>en_US</stored-value>
+      </pair>
+     <pair>
+       <displayed-value>English</displayed-value>
+       <stored-value>en</stored-value>
+     </pair>
+     <pair>
        <displayed-value>Asomiya</displayed-value>
        <stored-value>Asomiya</stored-value>
      </pair>
@@ -725,14 +733,7 @@ it, please enter the types and the actual numbers or codes.</hint>
        <displayed-value>N/A</displayed-value>
        <stored-value></stored-value>
      </pair>
-     <pair>
-       <displayed-value>English (United States)</displayed-value>
-       <stored-value>en_US</stored-value>
-      </pair>
-     <pair>
-       <displayed-value>English</displayed-value>
-       <stored-value>en</stored-value>
-     </pair>
+
      <pair>
        <displayed-value>Spanish</displayed-value>
        <stored-value>es</stored-value>
